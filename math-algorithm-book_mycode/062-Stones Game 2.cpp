@@ -34,6 +34,7 @@ const ll mod = 998244353;
 template<class T> inline bool chmax(T& a, T b) {if(a < b) {a = b; return 1;} return 0; }
 template<class T> inline bool chmin(T& a, T b) {if(a > b) {a = b; return 1;} return 0; }
 
+//2の累乗を計算する関数
 ll f(ll n) {
     ll ans = 1;
     for(int i=0; i<n; i++) {
@@ -46,10 +47,12 @@ int main() {
     
     ll N;
     cin >> N;
+    //2の累乗の集合を用意する
     set<ll> s;
     for(int i=0; i<60; i++) {
         s.insert(f(i));
     }
+    //N+1が集合sに含まれているか調べる
     if(s.count(N+1)) {
         cout << "Second" << endl;
     }
