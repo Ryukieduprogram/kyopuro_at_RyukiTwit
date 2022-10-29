@@ -36,6 +36,12 @@ template<class T> inline bool chmax(T& a, T b) {if(a < b) {a = b; return 1;} ret
 template<class T> inline bool chmin(T& a, T b) {if(a > b) {a = b; return 1;} return 0; }
 
 ll isprime(ll N) {
+    if(N == 1) {
+        return false;
+    }
+    if(N == 2) {
+        return true;
+    }
     for(ll i=2; i*i<=N; i++) {
         if(N%i == 0) {
             return false;
